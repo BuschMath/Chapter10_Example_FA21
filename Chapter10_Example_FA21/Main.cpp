@@ -2,23 +2,13 @@
 
 using namespace std;
 
-typedef double SCALAR;
-
-union example
-{
-	SCALAR s_point;
-	float f_point;
-	int i_point;
-};
-
 int main()
 {
-	example point;
+	int num = 42;
+	int* p_num = &num;
 
-	point.f_point = 3.14;
-	point.i_point = 42;
-
-	cout << point.f_point << " " << point.i_point << endl << endl;
+	cout << "Number: " << num << endl << endl;
+	cout << "Pointer: " << p_num << endl << endl;
 
 	return 0;
 }
